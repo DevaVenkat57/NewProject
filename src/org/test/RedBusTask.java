@@ -33,17 +33,17 @@ public class RedBusTask {
 
 		WebElement txtSource = driver.findElement(By.id("src"));
 
-		txtSource.sendKeys("Chennai (All Locations)",Keys.ENTER);
+		txtSource.sendKeys("Chennai (All Locations)", Keys.ENTER);
 
-//		Robot rob = new Robot();
-//
-//		rob.keyPress(KeyEvent.VK_ENTER);
-//		rob.keyRelease(KeyEvent.VK_ENTER);
+		// Robot rob = new Robot();
+		//
+		// rob.keyPress(KeyEvent.VK_ENTER);
+		// rob.keyRelease(KeyEvent.VK_ENTER);
 
-		driver.findElement(By.id("dest")).sendKeys("Bangalore (All Locations)",Keys.ENTER);
+		driver.findElement(By.id("dest")).sendKeys("Bangalore (All Locations)", Keys.ENTER);
 
-//		rob.keyPress(KeyEvent.VK_ENTER);
-//		rob.keyRelease(KeyEvent.VK_ENTER);
+		// rob.keyPress(KeyEvent.VK_ENTER);
+		// rob.keyRelease(KeyEvent.VK_ENTER);
 
 		driver.findElement(By.id("onward_cal")).click();
 

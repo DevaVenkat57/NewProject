@@ -16,14 +16,14 @@ public class Masikini {
 		WebDriver driver = new ChromeDriver();
 
 		driver.navigate().to("https://masikini.com/");
-
-		driver.findElement(By.xpath("//a[text()='Laptops']")).click();
-
-		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+		// driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 
 		driver.manage().window().maximize();
 
-		driver.findElement(By.xpath("//div[text()='ASUS TUF Gaming Laptop, 15.6”...']")).click();
+		driver.findElement(By.xpath("//a[text()='Laptops']")).click();
+		Thread.sleep(5000);
+
+		driver.findElement(By.xpath("//div[text()='Acer Nitro 5 Gaming Laptop,...']")).click();
 
 		Thread.sleep(10000);
 
@@ -38,6 +38,7 @@ public class Masikini {
 
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[text()='ADD TO CART ']")).click();
+		Thread.sleep(2000);
 
 		driver.findElement(By.xpath("(//a[@href='cart.php'])[3]")).click();
 
@@ -47,11 +48,10 @@ public class Masikini {
 			WebElement product = lstProducts.get(i);
 			System.out.println(product.getText());
 		}
+		
+		
+		System.out.println("Done....");
 
-		// driver.findElement(By.xpath("//button[text()='SIGNUP NOW']")).click();
-		//
-		// driver.findElement(By.xpath("//button[text()='CREATE MASIKINI
-		// ACCOUNT']")).click();
 	}
 
 }
